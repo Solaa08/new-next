@@ -12,19 +12,19 @@ interface ButtonProps extends ButtonWithChildren {
 }
 
 const buttonColors = {
-  [VARIANT.PRIMARY]: "bg-primary",
-  [VARIANT.SECONDARY]: "bg-secondary",
-  [VARIANT.DANGER]: "bg-danger",
-  [VARIANT.WARNING]: "bg-warnin",
-  [VARIANT.SUCCESS]: "bg-success"
+  [VARIANT.PRIMARY]: "bg-blue-500",
+  [VARIANT.SECONDARY]: "bg-gray-200",
+  [VARIANT.DANGER]: "bg-red-200",
+  [VARIANT.WARNING]: "bg-orange-100",
+  [VARIANT.SUCCESS]: "bg-green-100"
 }
 
 const textColors  = {
-  [VARIANT.PRIMARY]: "bg-primary",
-  [VARIANT.SECONDARY]: "bg-secondary",
-  [VARIANT.DANGER]: "bg-danger",
-  [VARIANT.WARNING]: "bg-warnin",
-  [VARIANT.SUCCESS]: "bg-success"
+  [VARIANT.PRIMARY]: "text-white",
+  [VARIANT.SECONDARY]: "text-gray-400",
+  [VARIANT.DANGER]: "text-red-500",
+  [VARIANT.WARNING]: "text-orange-300",
+  [VARIANT.SUCCESS]: "text-green-500"
 }
 
 export default function Button({
@@ -36,7 +36,7 @@ export default function Button({
 
   return (
     <button
-      className={clsx(buttonColors[variant], textColors[variant], className, 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded')}
+      className={clsx(buttonColors[variant], textColors[variant], className, 'font-bold py-2 px-4 rounded')}
       {...props}
     >
       {children}
