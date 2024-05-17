@@ -12,19 +12,19 @@ interface ButtonProps extends ButtonWithChildren {
 }
 
 const buttonColors = {
-  [VARIANT.PRIMARY]: "bg-blue-500",
-  [VARIANT.SECONDARY]: "bg-gray-200",
-  [VARIANT.DANGER]: "bg-red-200",
-  [VARIANT.WARNING]: "bg-orange-100",
-  [VARIANT.SUCCESS]: "bg-green-100"
+  [VARIANT.PRIMARY]: "bg-primary",
+  [VARIANT.SECONDARY]: "bg-secondary",
+  [VARIANT.DANGER]: "bg-danger",
+  [VARIANT.WARNING]: "bg-warning",
+  [VARIANT.SUCCESS]: "bg-success"
 }
 
 const textColors  = {
-  [VARIANT.PRIMARY]: "text-white",
-  [VARIANT.SECONDARY]: "text-gray-400",
-  [VARIANT.DANGER]: "text-red-500",
-  [VARIANT.WARNING]: "text-orange-300",
-  [VARIANT.SUCCESS]: "text-green-500"
+  [VARIANT.PRIMARY]: "text-primary-text",
+  [VARIANT.SECONDARY]: "text-secondary-text",
+  [VARIANT.DANGER]: "text-danger-text",
+  [VARIANT.WARNING]: "text-warning-text",
+  [VARIANT.SUCCESS]: "text-success-text"
 }
 
 export default function Button({
