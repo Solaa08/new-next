@@ -1,8 +1,5 @@
-import Image from "next/image";
 import Button from "./nectron/Button";
-// import Input from "./nectron/Input";
 import { VARIANT } from "./nectron/variant";
-import {Input} from "@nextui-org/input";
 
 export default function Home() {
   return (

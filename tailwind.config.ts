@@ -16,16 +16,26 @@ const config: Config = {
     },
     colors: {
       'white': '#FFFFFF',
-      'primary': '#4880FF',
-      'primary-text': '#FFFFFF',
-      'secondary': '#E2E2E2',
-      'secondary-text': '#7E7E7E',
-      'danger': '#FCD7D4',
-      'danger-text': '#EF3826',
-      'warning': '#FFEDDD',
-      'warning-text': '#FFA756',
-      'success': '#CCF0EB',
-      'success-text': '#00B69B',
+      'primary': {
+        'bg': '#4880FF',
+        'text': '#FFFFFF'
+      },
+      'secondary': {
+        'bg': '#E2E2E2',
+        'text': '#7E7E7E'
+      },
+      'danger': {
+        'bg': '#FCD7D4',
+        'text': '#EF3826'
+      },
+      'warning': {
+        'bg': '#FFEDDD',
+        'text': '#FFA756'
+      },
+      'success': {
+        'bg': '#CCF0EB',
+        'text': '#00B69B'
+      },
     },
   },
 
