@@ -1,0 +1,18 @@
+
+import clsx from 'clsx';
+import React, { InputHTMLAttributes } from 'react';
+
+export type InputProps = InputHTMLAttributes<HTMLInputElement>;
+
+export default function Input({
+  children,
+  className,
+  ...props
+}: InputHTMLAttributes<HTMLInputElement>) {
+  return (
+    <input
+      className={clsx(className, 'bg-gray-100 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block p-2.5')}
+      {...props}
+    />
+  );
+}
