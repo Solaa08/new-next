@@ -12,11 +12,11 @@ interface ButtonProps extends ButtonWithChildren {
 }
 
 const buttonColors = {
-  [VARIANT.PRIMARY]: "bg-primary",
-  [VARIANT.SECONDARY]: "bg-secondary",
-  [VARIANT.DANGER]: "bg-danger",
-  [VARIANT.WARNING]: "bg-warning",
-  [VARIANT.SUCCESS]: "bg-success"
+  [VARIANT.PRIMARY]: "bg-primary-bg",
+  [VARIANT.SECONDARY]: "bg-secondary-bg",
+  [VARIANT.DANGER]: "bg-danger-bg",
+  [VARIANT.WARNING]: "bg-warning-bg",
+  [VARIANT.SUCCESS]: "bg-success-bg"
 }
 
 const textColors  = {
