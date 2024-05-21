@@ -17,24 +17,29 @@ const config: Config = {
     colors: {
       'white': '#FFFFFF',
       'primary': {
-        'bg': '#4880FF',
-        'text': '#FFFFFF'
+        'light' : '#85AAFF',
+        'default': '#4880FF',
+        'dark': '#000000'
       },
       'secondary': {
-        'bg': '#E2E2E2',
-        'text': '#7E7E7E'
+        'light' : '#D4D4D4',
+        'default': '#E2E2E2',
+        'dark': '#7E7E7E'
       },
       'danger': {
-        'bg': '#FCD7D4',
-        'text': '#EF3826'
+        'light' : '#FABDB7',
+        'default': '#FCD7D4',
+        'dark': '#EF3826'
       },
       'warning': {
-        'bg': '#FFEDDD',
-        'text': '#FFA756'
+        'light' : '#FFE2C7',
+        'default': '#FFEDDD',
+        'dark': '#FFA756'
       },
       'success': {
-        'bg': '#CCF0EB',
-        'text': '#00B69B'
+        'light' : '#AAE7DE',
+        'default': '#CCF0EB',
+        'dark': '#00B69B'
       },
     },
   },
