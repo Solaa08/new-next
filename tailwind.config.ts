@@ -16,16 +16,16 @@ const config: Config = {
     },
     colors: {
       'white': '#FFFFFF',
-      'dark': '#00000',
+      'dark': '#000000',
       'primary': {
         'light' : '#85AAFF',
         DEFAULT: '#4880FF',
         'dark': '#244080'
       },
       'secondary': {
-        'light' : '#D4D4D4',
-        DEFAULT: '#E2E2E2',
-        'dark': '#7E7E7E'
+        'light' : '#EAEAEA',
+        DEFAULT: '#C0C0C0',
+        'dark': '#959595'
       },
       'danger': {
         'light' : '#FABDB7',

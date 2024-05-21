@@ -1,4 +1,3 @@
-
 import clsx from 'clsx';
 import React, { InputHTMLAttributes } from 'react';
 
@@ -11,7 +10,7 @@ export default function Input({
 }: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
-      className={clsx(className, 'bg-gray-100 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block p-2.5')}
+      className={clsx(className, 'bg-secondary-light border border-secondary text-dark text-sm rounded-lg active:ring-success active:border-success block p-2.5')}
       {...props}
     />
   );
