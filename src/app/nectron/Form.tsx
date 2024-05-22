@@ -10,9 +10,10 @@ export default function Form({
   ...props
 }: FormHTMLAttributes<HTMLFormElement>) {
   return (
-    <form className={clsx(className, 'w-full max-w-xs bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4')}
+    <form className={clsx(className, 'bg-white rounded-xl p-12 gap-8 flex flex-col')}
     {...props}
     action={action}>
+        {children}
     </form>
   );
 }

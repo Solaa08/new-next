@@ -10,7 +10,7 @@ export default function Input({
 }: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
-      className={clsx(className, 'bg-secondary-light border border-secondary text-dark text-sm rounded-lg active:ring-success active:border-success block p-2.5')}
+      className={clsx(className, 'bg-transparent border border-secondary text-dark text-sm rounded-md active:ring-success active:border-success block p-3 h-14')}
       {...props}
     />
   );

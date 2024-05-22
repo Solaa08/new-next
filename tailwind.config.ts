@@ -17,6 +17,7 @@ const config: Config = {
     colors: {
       'white': '#FFFFFF',
       'dark': '#000000',
+      'bg': "#F5F6FA",
       'primary': {
         'light' : '#85AAFF',
         DEFAULT: '#4880FF',
@@ -28,9 +29,15 @@ const config: Config = {
         'dark': '#959595'
       },
       'danger': {
-        'light' : '#FABDB7',
-        DEFAULT: '#FCD7D4',
-        'dark': '#EF3826'
+        '100': "#F6D5D5",
+        '200': "#EDACAC",
+        '300': "#E58282",
+        '400' : '#DC5959',
+        DEFAULT: '#D32F2F',
+        '600': '#A92626',
+        '700': "#7F1C1C",
+        '800': "#541313",
+        '900': "#2A0909",
       },
       'warning': {
         'light' : '#FFE2C7',
@@ -43,6 +50,9 @@ const config: Config = {
         'dark': '#00B69B'
       },
     },
+    fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+    }
   },
 
   plugins: [],
