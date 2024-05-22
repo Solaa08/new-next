@@ -1,13 +1,12 @@
-
 import Button from "./nectron/Button";
 import Form from "./nectron/Form";
 import Input from "./nectron/Input";
 import Label from "./nectron/Label";
-import { AiOutlineClose, AiOutlineRight } from "react-icons/ai";
-
+import { AiOutlineClose} from "react-icons/ai";
 import { VARIANT } from "./nectron/variant";
 import OnTop from "./nectron/OnTop";
 import { createGame } from "./lib/actions";
+import { SubmitButton } from "./nectron/SubmitButton";
 
 export default function Home() {
   return (
@@ -22,9 +21,10 @@ export default function Home() {
           <OnTop>Etat du jeu</OnTop>
           <Input name="state" />
         </Label>
-        <Button variant={VARIANT.SECONDARY}>Continuer <AiOutlineRight size={18}/></Button>
+        <SubmitButton/>
         <Button variant={VARIANT.DANGER} outline>Annuler la création <AiOutlineClose size={18}/></Button>
       </Form>
     </main>
   );
 }
+
