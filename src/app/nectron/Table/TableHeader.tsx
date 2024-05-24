@@ -3,7 +3,7 @@ import React, { ThHTMLAttributes } from 'react';
 
 export type TableHeaderProps = ThHTMLAttributes<HTMLTableCellElement>;
 
-export default function TableHeader({
+export default function TableHeaderCell({
     className,
     children,
     ...props

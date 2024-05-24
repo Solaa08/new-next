@@ -9,7 +9,7 @@ export default function TableRow({
     ...props
 }: TableRowProps){
     return (
-        <tr className={clsx(className, 'flex justify-around px-2 py-8 border-b border-secondary-light text-center items-center')} {...props}>
+        <tr className={clsx(className, 'flex justify-around h-20 px-2 py-8 border-b border-secondary-light text-center items-center')} {...props}>
             {children}
         </tr>
     )
