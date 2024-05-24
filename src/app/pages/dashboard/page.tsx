@@ -9,6 +9,10 @@ import TableHead from "@/app/nectron/Table/TableHead";
 import TableHeaderRow from "@/app/nectron/Table/TableHeaderRow";
 import { getGames } from "@/app/lib/Table/actions";
 import Tag from "@/app/nectron/Tag";
+import Wrapper from "@/app/nectron/Wrapper";
+import Navigation from "@/app/nectron/Navigation/Navigation";
+import Sidebar from "@/app/nectron/Navigation/Sidebar";
+import Content from "@/app/nectron/Content";
 
 export default async function Dashboard() {
   const games = await getGames();
@@ -16,54 +20,64 @@ export default async function Dashboard() {
 
 
   return (
-    <main className="flex bg-bg min-h-screen flex-col items-center justify-between p-24 text-sm">
-      <Table>
-        <TableHead>
-          <TableHeaderRow>
-            <TableHeader>
-              ID
-            </TableHeader>
-            <TableHeader>
-              Nom
-            </TableHeader>
-            <TableHeader>
-              Date de sortie
-            </TableHeader>
-            <TableHeader>
-              état
-            </TableHeader>
-            <TableHeader>
-            </TableHeader>
-            <TableHeader>
-              Modifications
-            </TableHeader>
-          </TableHeaderRow>
-        </TableHead>
-        <TableBody>
-        {games?.map((game: any) => (
-            <TableRow>
-                <TableCell>
-                  {game.id}
-                </TableCell>
-                <TableCell>
-                  {game.name}
-                </TableCell>
-                <TableCell>
-                  {game.date_sortie}
-                </TableCell>
-                <TableCell>
-                  <Tag variant={VARIANT.SUCCESS}>{game.state}</Tag>
-                </TableCell>
-                <TableCell>
-                </TableCell>
-                <TableCell>
-                  <ButtonIcon variant={VARIANT.DANGER} className="text-white"><FaTrash size={20}/></ButtonIcon>
-                  <ButtonIcon variant={VARIANT.PRIMARY}><MdModeEditOutline size={20}/></ButtonIcon>
-                </TableCell>
-              </TableRow>
-          ))}
-            </TableBody>
-      </Table>
+    <main className="flex bg-bg min-h-screen">
+      <Wrapper>
+        <Sidebar>
+        <Navigation>
+        <Button variant={VARIANT.PRIMARY}>Accueil</Button>
+          <Button variant={VARIANT.PRIMARY}>Créer un jeu</Button>
+        </Navigation>
+        </Sidebar>
+        <Content>
+        <Table>
+          <TableHead>
+            <TableHeaderRow>
+              <TableHeader>
+                ID
+              </TableHeader>
+              <TableHeader>
+                Nom
+              </TableHeader>
+              <TableHeader>
+                Date de sortie
+              </TableHeader>
+              <TableHeader>
+                état
+              </TableHeader>
+              <TableHeader>
+              </TableHeader>
+              <TableHeader>
+                Modifications
+              </TableHeader>
+            </TableHeaderRow>
+          </TableHead>
+          <TableBody>
+          {games?.map((game: any) => (
+              <TableRow>
+                  <TableCell>
+                    {game.id}
+                  </TableCell>
+                  <TableCell>
+                    {game.name}
+                  </TableCell>
+                  <TableCell>
+                    {game.date_sortie}
+                  </TableCell>
+                  <TableCell>
+                    <Tag variant={VARIANT.SUCCESS}>{game.state}</Tag>
+                  </TableCell>
+                  <TableCell>
+                  </TableCell>
+                  <TableCell>
+                    <ButtonIcon variant={VARIANT.DANGER} className="text-white"><FaTrash size={20}/></ButtonIcon>
+                    <ButtonIcon variant={VARIANT.PRIMARY}><MdModeEditOutline size={20}/></ButtonIcon>
+                  </TableCell>
+                </TableRow>
+            ))}
+              </TableBody>
+        </Table>
+        </Content>
+      </Wrapper>
     </main>
   );
 }

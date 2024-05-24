@@ -9,7 +9,7 @@ export default function Table({
     ...props
 }: TableProps){
     return (
-        <table className={clsx(className, 'bg-white text-dark flex gap-1 flex-col w-full rounded-xl')} {...props}>
+        <table className={clsx(className, 'bg-white text-dark flex gap-1 flex-col w-[1000px] rounded-xl box-content')} {...props}>
             {children}
         </table>
     )
