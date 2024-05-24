@@ -7,9 +7,11 @@ import ButtonIcon from "@/app/nectron/ButtonIcon";
 import TableBody from "@/app/nectron/Table/TableBody";
 import TableHead from "@/app/nectron/Table/TableHead";
 import TableHeaderRow from "@/app/nectron/Table/TableHeaderRow";
+import { getGames } from "@/app/lib/Table/actions";
 
+export default async function Dashboard() {
+  const games = await getGames();
 
-export default function Dashboard() {
   return (
     <main className="flex bg-bg min-h-screen flex-col items-center justify-between p-24 text-sm">
       <Table>
@@ -35,18 +37,19 @@ export default function Dashboard() {
           </TableHeaderRow>
         </TableHead>
         <TableBody>
+        {games?.map((game: any) => (
             <TableRow>
                 <TableCell>
-                  00001
+                  {game.id}
                 </TableCell>
                 <TableCell>
-                  Dwarfs Fight
+                  {game.name}
                 </TableCell>
                 <TableCell>
-                  04 Sept 2019
+                  {game.date_sortie}
                 </TableCell>
                 <TableCell>
-                  <Button disabled variant={VARIANT.SUCCESS}>Déployé</Button>
+                  <Button disabled variant={VARIANT.SUCCESS}>{game.state}</Button>
                 </TableCell>
                 <TableCell>
                 </TableCell>
@@ -55,6 +58,7 @@ export default function Dashboard() {
                   <ButtonIcon variant={VARIANT.PRIMARY}><MdModeEditOutline size={20}/></ButtonIcon>
                 </TableCell>
               </TableRow>
+          ))}
             </TableBody>
       </Table>
     </main>
