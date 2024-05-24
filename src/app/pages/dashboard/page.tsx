@@ -8,9 +8,12 @@ import TableBody from "@/app/nectron/Table/TableBody";
 import TableHead from "@/app/nectron/Table/TableHead";
 import TableHeaderRow from "@/app/nectron/Table/TableHeaderRow";
 import { getGames } from "@/app/lib/Table/actions";
+import Tag from "@/app/nectron/Tag";
 
 export default async function Dashboard() {
   const games = await getGames();
+
+
 
   return (
     <main className="flex bg-bg min-h-screen flex-col items-center justify-between p-24 text-sm">
@@ -49,7 +52,7 @@ export default async function Dashboard() {
                   {game.date_sortie}
                 </TableCell>
                 <TableCell>
-                  <Button disabled variant={VARIANT.SUCCESS}>{game.state}</Button>
+                  <Tag variant={VARIANT.SUCCESS}>{game.state}</Tag>
                 </TableCell>
                 <TableCell>
                 </TableCell>
