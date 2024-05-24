@@ -24,7 +24,7 @@ export default function Home() {
               Date de sortie
             </TableHeader>
             <TableHeader>
-              Etat
+              état
             </TableHeader>
             <TableHeader>
             </TableHeader>
@@ -50,8 +50,8 @@ export default function Home() {
                 <TableCell>
                 </TableCell>
                 <TableCell>
-                  <ButtonIcon variant={VARIANT.DANGER} className="text-white"><FaTrash size={22}/></ButtonIcon>
-                  <ButtonIcon variant={VARIANT.PRIMARY}><MdModeEditOutline size={22}/></ButtonIcon>
+                  <ButtonIcon variant={VARIANT.DANGER} className="text-white"><FaTrash size={20}/></ButtonIcon>
+                  <ButtonIcon variant={VARIANT.PRIMARY}><MdModeEditOutline size={20}/></ButtonIcon>
                 </TableCell>
               </TableRow>
             </TableBody>

@@ -46,7 +46,7 @@ export default function ButtonIcon({
 
   return (
     <button
-      className={clsx( outline ? buttonOutline[variant]: buttonColors[variant], textColors[variant], className, 'w-[46px] h-[38px] flex gap-2 justify-center items-center py-2 px-3.5 text-center font-bold rounded uppercase')}
+      className={clsx( outline ? buttonOutline[variant]: buttonColors[variant], textColors[variant], className, 'flex gap-2 justify-center items-center py-3 px-4 text-center rounded box-content')}
       {...props}
     >
       {children}
