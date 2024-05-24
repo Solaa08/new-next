@@ -9,7 +9,7 @@ export default function TableHeader({
     ...props
 }: TableHeaderProps){
     return (
-        <th className={clsx(className, 'w-full font-bold justify-center items-center self-center text-center box-content')} {...props}>
+        <th className={clsx(className, 'w-full font-bold justify-center items-center self-center text-center box-content uppercase')} {...props}>
             {children}
         </th>
     )

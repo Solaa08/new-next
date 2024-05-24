@@ -9,8 +9,10 @@ export default function TableCell({
     ...props
 }: TableCellProps){
     return (
-        <td className={clsx(className, 'flex-row flex-nowrap items-center justify-center w-full box-content')} {...props}>
-            {children}
-        </td>
+        <div className='flex flex-row flex-nowrap items-center justify-center w-full box-content'>
+            <td className={clsx(className, 'flex flex-row flex-nowrap gap-4')} {...props}>
+                {children}
+            </td>
+        </div>
     )
 } 
