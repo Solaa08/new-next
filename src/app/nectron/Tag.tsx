@@ -44,25 +44,9 @@ export default function Tag({
   ...props
 }: SpanProps): ReactElement {
 
-  switch (children) {
-    case 'Déployé':
-      variant = VARIANT.SUCCESS;
-    break;
-    case 'En cours':
-      variant = VARIANT.WARNING;
-    break;
-    case 'Arrêté':
-      variant = VARIANT.DANGER;
-    break;
-    case 'En attente':
-      variant = VARIANT.SECONDARY;
-    break;
-
-  }
-
   return (
     <span
-      className={clsx( outline ? tagOutline[variant]: tagColors[variant], TagTextColors[variant], className, 'flex w-28 gap-2 justify-center items-center text-center font-bold py-1.5 px-2.5 rounded')}
+      className={clsx( outline ? tagOutline[variant]: tagColors[variant], TagTextColors[variant], className, 'flex gap-2 justify-center items-center text-center font-bold py-1.5 px-8 rounded')}
       {...props}
     >
       {children}
